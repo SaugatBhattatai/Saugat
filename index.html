@@ -5,6 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Saugat Bhattarai | Developer Portfolio</title>
   <style>
+    /* Animated royal gradient background for About section */
+@keyframes royalGradient {
+  0% { background: linear-gradient(120deg, #4169E1, #FFD700); }
+  25% { background: linear-gradient(120deg, #6A0DAD, #FFD700); }
+  50% { background: linear-gradient(120deg, #B22222, #228B22); }
+  75% { background: linear-gradient(120deg, #228B22, #4169E1); }
+  100% { background: linear-gradient(120deg, #4169E1, #FFD700); }
+}
+
+#about {
+  animation: royalGradient 20s infinite ease-in-out;
+  color: #fff;
+  border-radius: 15px;
+  padding: 60px 20px;
+  margin: auto;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: flex-start;
+  background-color: rgba(0, 0, 0, 0.4); /* subtle contrast for text */
+  padding: 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
+}
+
+.about-image {
+  flex: 0 0 240px;
+  max-width: 240px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(255, 215, 0, 0.4);
+}
+
+.about-text h3 {
+  margin-top: 20px;
+  font-size: 22px;
+  color: #fff;
+}
+
+.about-text ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.about-text ul li {
+  margin-bottom: 8px;
+  list-style: "🌟 ";
+}
+
     .about-container {
   display: flex;
   flex-wrap: wrap;
@@ -69,7 +127,7 @@
 
 .about-text ul li {
   margin-bottom: 8px;
-  list-style: "⭐ ";
+  list-style: "⚜️ ";
 }
 
     * {
@@ -215,9 +273,9 @@
   </section>
 
 <section id="about">
-  <h2>About Me</h2>
+  <h2 style="text-align: center; color: #fff;"> 👑 About Me</h2>
   <div class="about-container">
-    <img src="images/saugat.jpg" alt="Saugat Bhattarai" class="about-image">
+    <img src="C:\Users\Dell\OneDrive\Desktop\my project\image\profile.jpg.jpg" alt="Saugat Bhattarai" class="about-image">
     <div class="about-text">
       <p>
         👋 I'm <strong>Saugat Bhattarai</strong>, currently pursuing <strong>BSc CSIT (Hons)</strong> at <strong>ISMT College</strong>. I'm passionate about building smart, user-friendly digital solutions and love learning new technologies—especially in <strong>web development</strong>, <strong>AI</strong>, and <strong>design</strong>.
