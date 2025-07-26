@@ -5,6 +5,73 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Saugat Bhattarai | Developer Portfolio</title>
   <style>
+    .about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: flex-start;
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  transition: background 0.5s;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-container:hover {
+  background: linear-gradient(135deg, #e0f7fa, #f3e5f5);
+}
+
+.about-container:hover::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3), transparent 70%);
+  animation: shine 1.5s infinite linear;
+}
+
+@keyframes shine {
+  0% { transform: translate(-100%, -100%) rotate(45deg); }
+  100% { transform: translate(100%, 100%) rotate(45deg); }
+}
+
+.about-image {
+  flex: 0 0 220px;
+  max-width: 220px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h3 {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #333;
+}
+
+.about-text ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.about-text ul li {
+  margin-bottom: 8px;
+  list-style: "⭐ ";
+}
+
     * {
       margin: 0;
       padding: 0;
@@ -147,19 +214,20 @@
     <p>A passionate learner, developer, and tech enthusiast.</p>
   </section>
 
- <section id="about">
+<section id="about">
   <h2>About Me</h2>
-  <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center;">
-     <img src="images/saugat.jpg" alt="Saugat Bhattarai" style="width: 150px; border-radius: 10px;">
-    <div style="flex: 1;">
+  <div class="about-container">
+    <img src="images/saugat.jpg" alt="Saugat Bhattarai" class="about-image">
+    <div class="about-text">
       <p>
         👋 I'm <strong>Saugat Bhattarai</strong>, currently pursuing <strong>BSc CSIT (Hons)</strong> at <strong>ISMT College</strong>. I'm passionate about building smart, user-friendly digital solutions and love learning new technologies—especially in <strong>web development</strong>, <strong>AI</strong>, and <strong>design</strong>.
       </p>
       <p>
         I aim to solve real-world problems through code and creativity, while constantly improving both my technical and personal skills.
       </p>
-      <h3 style="margin-top: 20px;">💻 Technical Skills</h3>
-      <ul style="margin-left: 20px;">
+
+      <h3>💻 Technical Skills</h3>
+      <ul>
         <li>Frontend: HTML, CSS, JavaScript (Basics), Bootstrap</li>
         <li>Backend: PHP, MySQL</li>
         <li>Programming Languages: Python, C, Java</li>
@@ -167,8 +235,9 @@
         <li>Design & Tools: Figma, Canva, VS Code, XAMPP</li>
         <li>Beginner in AI & Machine Learning</li>
       </ul>
-      <h3 style="margin-top: 20px;">🤝 Soft Skills</h3>
-      <ul style="margin-left: 20px;">
+
+      <h3>🧠 Soft Skills</h3>
+      <ul>
         <li>Problem-solving and critical thinking</li>
         <li>Teamwork and collaboration</li>
         <li>Effective communication and public speaking</li>
@@ -178,6 +247,7 @@
     </div>
   </div>
 </section>
+
 
 
   <section id="skills">
